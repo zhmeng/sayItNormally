@@ -1,0 +1,23 @@
+白话Correncent Thinking in java
+
+对于Runnable的我来说~
+0、我只是个灵魂。
+1、普通创建我一个线程，来单独在cpu时间片上去运行任务。最简单借宿在Thread里。
+2、我的孪兄弟 Callable， 能够被 ExecutorService 返回Future。通过它的get去接收它。
+3、不用Thread.还有个地方能够借宿，也是我通常会去的地方，那就是 ExecutorService 线程池，可以通过它创建 newCachedThreadPool newFixedThreadPool ~
+   我只是个灵魂，只能掌握我自己的思想，不能控制行为。
+
+对于Thread的我来说。
+0、我需要Runnable这样的灵魂，这样我才能有活力。
+1、我要想在自己运行的时候停止一下啊。TimeUnit.SECONDS.sleep
+2、我和我的线程兄弟们是有级别区分的。  Thread.currentThread().setPriority(priority);
+3、Thread.yield(); 我要让一下~
+4、对于我中领头的MainThread . Daemon ，这样的兄弟，走之前带上它们。 Thread.setDaemon(true)
+5、搞个地方，专门制作这些Daemon的兄弟们。就把这个地方叫做Factory.定制化的塑造灵魂所形成的Thread。
+9、假如我是Daemon的话，由我喊出来的兄弟们都是Daemon的。
+10、我要是Daemon的话，在我跟着大哥走的时候，finally都不用管的。~ 无条件服从。 也许如果我要执行finally ，需要另觅高人了。
+11、我要等睡觉的兄弟回来，找到睡着的它然后说 *.join();  非自然醒就要 interrupted 了。。 我说等你多久就多久， 我说了之后，你再多睡的我就不管了。
+12、Daemon的我很老实，很负责任。自己独立工作，不影响其他人正常运转，并且其他人需要我的时候，我会给你我所有的。
+13、在工厂里还能够将捕获我异常的哥们和我协作。
+14、我和兄弟们对资源对资源共享需要些策略。~ 
+15、syc
